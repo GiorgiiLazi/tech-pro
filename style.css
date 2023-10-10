@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:ital,wght@0,200;0,300;0,500;1,100;1,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:ital,wght@0,200;0,300;0,500;1,100;1,200;1,300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 body{
     margin: 0;
@@ -13,27 +13,69 @@ body{
 }
 /* banner */
 .banner{
+    z-index: 0;
+    position:fixed;
+    width: 100%;
     background-color: red;
     color: white;
-    padding: 5px;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;;
     text-align: center;
     text-transform: uppercase;
     text-decoration: underline;
     font-weight: bold;
+    animation: bannerFadeIn 2s ease-in;
+    height: 20px;
+}
+.pulsate {
+    animation: pulsate 1.5s ease-out;
+    animation-iteration-count:infinite;
+    opacity: 0.5;
+}
+@keyframes pulsate {
+    0% { 
+        opacity: 0.5;
+    }
+    50% { 
+        opacity: 1.0;
+    }
+    100% { 
+        opacity: 0.5;
+    }
+}
+.banner *{
+    cursor: pointer;
+}
+#remove1{
+    cursor: pointer;
+    color: yellow;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    margin-right: 10px;
+}
+#remove2{
+    cursor: pointer;
+    color: yellow
+}
+@keyframes bannerFadeIn{
+    0%{opacity: 0; transform: translateX(200px)}
+    100%{opacity: 1; transform: translateX(0px)}
 }
 /* modal */
 .modal-background{
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0,0,0,0.4);
     display: flex;
     justify-content: center;
     align-items: center;
-
+    z-index: 10;
+    
 }
 .modal{
-    max-width: 50%;
+    max-width: 60%;
     position:fixed;
     display: flex;
     justify-content: center; 
@@ -43,8 +85,9 @@ body{
     padding: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
+    border: 2px solid white;
     border-radius: 14px;
-    z-index: 4;
+    z-index: 10;
     animation: fadeIn 2s ease-in
 }
 .modal-title{
@@ -54,13 +97,15 @@ body{
     margin: 0;
     padding: 0;
     font-weight: bolder;
-    font-size: x-large;
+    font-size: 30px;
     padding-left: 20px;
     padding-right: 20px;
+    text-transform: uppercase;
     
 }
 .modal-text{
     border-top: 2px solid white;
+    font-size: 18px;
     padding: 0;
     text-align: left;
     padding-left: 20px;
@@ -81,7 +126,126 @@ body{
     100%{opacity: 0; transform:translateY(200px)}
 }
 /* navbar */
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    background-color:goldenrod;
+    height: 30px;
+    z-index: 2;
+    animation: navbarFadeIn 2s ease-in
+}
+.logo{
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 1.5px 1.5px 1px violet
+}
+.links{
+    height: 100%;
+}
+.links ul{
+    margin-top:0;
+    padding-top: 0;
+    /* height: 100%; */
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    list-style: none;
+}
+.links ul li{
+    height: 30px;
+    padding: 0px 20px;
+    
+}
+.nav-links{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    text-shadow: 1.5px 1.5px 1px violet
+}
+.nav-links img{
+    height: 30px;
+    width: 30px;
+    color: white
+}
+.links ul li:hover{
+    background-color: rgba(0,0,0,0.3)
+}
+.dropdown{
+    position: relative;
+    display: inline-block
+}
+.dropdown-content {
+    top: 30px;
+    left: 0px;
+    font-size: 16px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    width: 200px;
 
-/* left-bar */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+    text-shadow: 1px 1px 1px lightgrey;
+    padding: 20px;
+    z-index: 1;
+    color: black
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+@keyframes navbarFadeIn{
+    0%{opacity: 0; transform: translateX(-200px)}
+    100%{opacity: 1; transform: translateX(0px)}
+}
+.catalog-items{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}
+.dropdown-content *{
+    text-decoration: none;
+    color:crimson;
+    display: block;
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+    
+}
+.dropdown-content *:hover{
+    background-color: rgba(0,0,0,0.1);
+}
 
+/* main section */
+.main-section{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+}
+.main-message{
+    color:crimson;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 54px;
+    text-shadow: 1.5px 1.5px 1px #999;
+    grid-column: 2/6;
+    grid-row: 2;
+    animation: messageFadeIn 2s ease-in;
+}
+@keyframes messageFadeIn{
+    0%{opacity: 0; transform: translateY(-200px)}
+    100%{opacity: 1; transform: translateY(0px)}
+}
 /* footer */
