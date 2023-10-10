@@ -13,3 +13,4 @@ removeBtnOne.addEventListener('click', ()=>{
 removeBtnTwo.addEventListener('click', ()=>{
     modal.style.display = "none"
 })
+console.log(hello)
