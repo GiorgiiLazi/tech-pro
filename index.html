@@ -6,21 +6,21 @@
     <title>Tech-Pro</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./imgs/logo.png">
-    
 </head>
 <body>
+
     <!-- banner -->
 
     <div class="banner">
         <div class="banner-container">
-            <span id="showBanner" class="pulsate">Only today 90% off on every item in the store!!!</span>
+            <span id="showBanner" class="pulsate"> 90% off on every second item in the store only on <span id="date"></span>!!! </span>
             <span id="remove1">&#9746;</span>
         </div>
     </div>
 
     <!-- modal -->
 
-    <div style="display: none;" class="active modal-background">
+    <div class="not-show modal-background">
         <div class="modal">
             <div class="modal-title">
                 <span>Get yourself a 90% discount NOW!!!</span>
@@ -28,10 +28,7 @@
             </div>
             <div class="modal-text">
                 <p>
-                    Have you ever gazed upon tech store and wished to buy some pricy TV or PC.  
-                </p>
-                <p> 
-                    Well today is your lucky day! We wish to find ourselves devoted consumer base and there is no better way than lowering the prices down and providing best customer service.   
+                    Have you ever gazed upon a tech store and wished to buy some pricy TV or PC.  
                 </p>
                 <p>
                     Visit qr below and get additional discount right now!!!
@@ -56,20 +53,14 @@
                 </li>
                 <li class="dropdown" style="position: relative">
                     <a class="nav-links">Catalog 
-                        <span style="color: white; text-shadow: none">&#8595;</span>
-                        
-                        
+                        <span style="color: white; text-shadow: none">&#8595;</span> 
                     </a>
                     <div class="dropdown-content">
                         <a href="">Laptops</a>
                         <a href="">PC</a>
                         <a href="">TV & Monitors</a>
                         <a href="">Headphones</a>
-
-
                     </div>
-                    
-                    
                 </li>
                 <li>
                     <a class="nav-links" href="https://github.com/GiorgiiLazi/tech-pro.git">
@@ -91,7 +82,6 @@
                         +999 999 999
                     </a>
                 </li>
-                
             </ul>
         </div>
     </nav>
@@ -99,18 +89,17 @@
     <!-- left-panel -->
 
     <div class="left-panel">
-        <span class="right-arrow arrow">&#8680;</span>
-        <span style="display:none" class="left-arrow arrow">&#8678;</span>
-        <!-- <div class="left-panel-content">
-            qr-code -->
-            <!-- <div>Share this link and get a discount!</div> -->
-            <!-- sign-in form-->
-
-            <!-- leave feedback form
-        </div> -->
+        
+        <p id="aboutRef">About</p>
+        <p id="signInRef">Sign in</p>
+        <p id="reviewsRef">Reviews</p>
+        <p id="authorRef">Lazishvili G.</p>
+        
+        
     </div>
 
     <!-- main section -->
+
     <section class="main-section">
         <div class="main-message">
             We sell laptops and laptops accessories!
@@ -132,14 +121,78 @@
             <img src="./imgs/headphones.jpg" alt="">
             <h2 class="box-title">Headphones</h2>
         </div>
-        
-            
-       
     </section>
 
-    
-    
-    <!-- subscription -->
+    <!-- About -->
+
+    <section  class="about not-show">
+        <div class="about-text">
+            <h1 class="logo pulsate">Tech-Pro</h1>
+            <p><span>&#x2654;</span> Tech-Pro is a company founded by our C.E.O - Lazishvili Giorgi</p>
+            <p><span>&#x2692</span> Tech-Pro specializes in a redistribution of laptops and laptops accesories</p>
+            <p><span>&#x2694</span> Tech-Pro was selected as the best distributor of complex electronic devices by our peers and competitors</p>
+            <p><span>&#x2709;</span> Tech-Pro is looking forward for you to buy our product, leave a feedback or become our new employee</p>
+            <p><span>&#x270D</span> Tech-Pro is a web-development portfolio project of a Lazishvili Giorgi</p>
+            <span id="aboutBackBtn" class="BackBtn">&#8629; Go back</span>
+        </div>
+    </section>
+
+    <!-- Sign in -->
+
+    <section class="sign-in not-show">
+        <form class="sign-form">
+
+            <label for="username">Username:
+                <input type="text" name="" id="username" placeholder="type username" required>
+            </label>
+            
+            <label for="phoneNumber">Phone:
+                <input type="number" name="" id="phoneNumber" placeholder="+999999999" required>
+            </label>
+            
+
+            <label for="form-email">Email:
+                <input type="email" name="" id="form-email" placeholder="email@google.com" required>
+            </label>
+            
+
+            <label for="form-password1">Password:
+                <input type="password" name="" id="form-password1" required>
+            </label>
+            
+
+            <label for="form-password2">Type password again:
+                <input type="password" name="" id="form-password2" required>
+            </label>
+            
+            <br>
+            <br>
+
+            <label for="sendAds">
+                <input type="checkbox" checked name="" id="sendAds"> Would you like to get our special offers via Email and phone number?
+                
+            </label>
+            
+            <br>
+
+            <input type="submit" value="Submit">
+            <span id="formBackBtn" class="BackBtn">&#8629; Go back</span>
+        </form>
+    </section>
+
+    <!-- sign-in banner -->
+
+    <!-- Reviews -->
+
+    <!-- Laptops -->
+
+    <!-- PC -->
+
+    <!-- TV & Monitors -->
+
+    <!-- Headphones -->
+
+    <!-- Subscription to newsletter -->
 
     <section class="subscription">
         <h1>Subscribe to our newsletter and stay updated</h1>
@@ -157,28 +210,21 @@
         
         </form>
         
-        
     </section>
 
 
     <!-- subscribe modal -->
 
-    <!-- <div class="sub-modal-background">
+    <div class="not-show subBackground">
         <div class="sub-modal">
             <h1 class="sub-modal-text"></h1>
-            <span id="remove3">&#9746;</span>
-
-        </div>
-    </div> -->
-
-    <div style="display:none;" class="subBackground">
-        <div class="sub-modal">
-            <h1 class="sub-modal-text"></h1>
+            <h4 class="sub-modal-text2"></h4>
             <span id="remove3">&#9746;</span>
         </div>
     
 
     </div>
+
     <!-- footer -->
 
     <footer>

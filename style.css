@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:ital,wght@0,200;0,300;0,500;1,100;1,200;1,300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 html{
-    height: 150vh;
+    height: auto;
 }
 body{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-    height:150vh;
+    height: auto;
     font-family: Montserrat,  sans-serif;
     background: rgb(34,193,195);
     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+/* non-visible class */
+.not-show{
+    display: none !important;
 }
 /* banner */
 .banner{
@@ -76,7 +80,6 @@ body{
     justify-content: center;
     align-items: center;
     z-index: 10;
-    
 }
 .modal{
     max-width: 40%;
@@ -84,7 +87,7 @@ body{
     display: flex;
     justify-content: center; 
     flex-direction: column;
-    background-color: red;
+    background-image: linear-gradient(to right, #ff9800, #fcaa00, #f8bb00, #f2cb00, #ebdc12);
     color: white;
     padding: 0px;
     padding-top: 20px;
@@ -321,18 +324,129 @@ body{
     color:crimson
     
 }
+/* about section */
+.about{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-text{
+    position: relative;
+    width: 700px;
+    background-image: linear-gradient(to right top, #053720, #15622e, #3a8f34, #6bbd2f, #a8eb12);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: Oswald;
+    text-wrap: balance;
+}
+.about-text h1{
+    text-align: center;
+    font-size: 40px;;
+}
+.about-text p{
+    color: white;
+    font-size: 15px;
+}
+.about-text p span{
+    color:gold;
+    font-size: 18px;;
+}
+.BackBtn{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    color: crimson;
+    font-size: 25px;
+    text-shadow: 1px 1.5px 2px orangered
+}
+
+/* sign-in form */
+
+.sign-in{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sign-form{
+    position: relative;
+    background-image: linear-gradient(to right bottom, #b3c81e, #a2d109, #8cda00, #6ce200, #33eb12);
+    padding: 20px;
+    padding-top: 50px;
+    border-radius: 20px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color:darkred;
+    font-family: Montserrat,  sans-serif;
+}
+.sign-form label{
+    display: inline-block ;
+    width: 100%;
+    padding: 5px 0px;;
+}
+.sign-form label input{
+    border-radius: 5px;
+    padding: 4px;
+    outline-style: none;
+    border: none;
+    width: 100%;
+    display: inline-block
+}
+
 /* left panel */
 .left-panel{
     cursor: pointer;
     display: flex;
+    flex-direction:column;
     align-items: center;
+    justify-content: space-around;
     position: fixed;
     background-image: linear-gradient(to bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
     height: 100%;
     width: 25px;
     z-index: 1;
     border: solid 1px black;
-    animation: leftbarFadeIn 2s ease-in
+    transition: width 0.3s ease-in
+}
+.left-panel *{
+    position: absolute;
+}
+.left-panel:hover{
+    width: 150px;
+}
+.left-panel * {
+    position: absolute;
+    left: -130px;
+    transition: 0.5s;
+    padding: 35px;
+    width: 130px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+.left-panel p:hover{
+    left: 0;
+}
+#aboutRef{
+    top: 100px
+}
+#signInRef{
+    top: 200px;
+}
+#reviewsRef{
+    top: 300px;
+}
+#authorRef{
+    top: 400px;
 }
 @keyframes leftbarFadeIn{
     0%{opacity: 0; transform: translateX(-200px)}
@@ -409,7 +523,7 @@ body{
     top: 20%;
     left: 20%;
     display: flex;
-    justify-self: center; 
+    justify-content: space-around; 
     flex-direction: column;
     background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
     padding: 0px;
@@ -422,10 +536,19 @@ body{
     width: 100%;
 }
 .sub-modal-text{
+    font-size: 27px;
+    width: 100%;
     font-family: Oswald;
-    padding: 20px;
+    padding: 30px;
     color: white;
     text-wrap: balance;
+}
+.sub-modal-text2{
+    text-align: center;
+    width: 100%;
+    font-family: Oswald;
+    color: white;
+    
 }
 #remove3{
     position: absolute;
