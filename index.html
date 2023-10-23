@@ -89,21 +89,18 @@
     <!-- left-panel -->
 
     <div class="left-panel">
-        
         <p id="aboutRef">About</p>
-        <p id="signInRef">Sign in</p>
+        <p id="joinRef">Join</p>
         <p id="reviewsRef">Reviews</p>
         <p id="authorRef">Lazishvili G.</p>
-        
-        
     </div>
 
     <!-- main section -->
 
-    <section class="main-section">
-        <div class="main-message">
+    <section class="section main-section">
+        <!-- <div class="main-message">
             We sell laptops and laptops accessories!
-        </div>
+        </div> -->
         
         <div class="box1">
             <img src="./imgs/laptop.jpg" alt="">
@@ -125,11 +122,11 @@
 
     <!-- About -->
 
-    <section  class="about not-show">
+    <section  class="section about not-show">
         <div class="about-text">
             <h1 class="logo pulsate">Tech-Pro</h1>
             <p><span>&#x2654;</span> Tech-Pro is a company founded by our C.E.O - Lazishvili Giorgi</p>
-            <p><span>&#x2692</span> Tech-Pro specializes in a redistribution of laptops and laptops accesories</p>
+            <p><span>&#x2692</span> Tech-Pro specializes in realization of laptops and laptops accesories</p>
             <p><span>&#x2694</span> Tech-Pro was selected as the best distributor of complex electronic devices by our peers and competitors</p>
             <p><span>&#x2709;</span> Tech-Pro is looking forward for you to buy our product, leave a feedback or become our new employee</p>
             <p><span>&#x270D</span> Tech-Pro is a web-development portfolio project of a Lazishvili Giorgi</p>
@@ -139,50 +136,82 @@
 
     <!-- Sign in -->
 
-    <section class="sign-in not-show">
+    <section class="section sign-in not-show">
         <form class="sign-form">
 
-            <label for="username">Username:
+            <label for="username">
+                <p>Username:</p>
                 <input type="text" name="" id="username" placeholder="type username" required>
             </label>
             
-            <label for="phoneNumber">Phone:
+            <label for="phoneNumber">
+                <p>Phone:</p>
                 <input type="number" name="" id="phoneNumber" placeholder="+999999999" required>
             </label>
             
 
-            <label for="form-email">Email:
+            <label for="form-email">
+                <p>Email:</p>
                 <input type="email" name="" id="form-email" placeholder="email@google.com" required>
             </label>
             
 
-            <label for="form-password1">Password:
+            <label for="form-password1">
+                <p>Password:</p>
                 <input type="password" name="" id="form-password1" required>
             </label>
             
 
-            <label for="form-password2">Type password again:
+            <label for="form-password2">
+                <p>Repeat password:</p>
                 <input type="password" name="" id="form-password2" required>
             </label>
             
-            <br>
-            <br>
 
-            <label for="sendAds">
-                <input type="checkbox" checked name="" id="sendAds"> Would you like to get our special offers via Email and phone number?
-                
-            </label>
+            <input type="checkbox" checked name="" id="sendAds"> Would you like to get our special offers via Email and phone number?
+            <label for="sendAds"></label>
             
-            <br>
 
-            <input type="submit" value="Submit">
+            <input id="formSubmit-Btn" type="submit" value="Submit">
             <span id="formBackBtn" class="BackBtn">&#8629; Go back</span>
         </form>
     </section>
 
-    <!-- sign-in banner -->
+    <!-- sign-in Popup -->
+    <div class="reg-Pop not-show">
+        <div class="reg-subPop">
+            <h2 id="regIn-header"></h2>
+            <p id="regIn-text"></p>
+        </div>
+    </div>
 
     <!-- Reviews -->
+
+    <section class="reviewsSection not-show">
+        <div class="reviews-content">
+            <ul class="customers-reviews">
+                <li id="customer-review2">
+                    <h2>"Simply GreaT!"</h2>
+                    <p>— Sarah5000</p>
+                </li>
+                <li id="customer-review3">
+                    <h2>"I have ordered my laptop two days ago and I got it two days ahead"</h2>
+                    <p>— John Mashukovic</p>
+                </li>
+                <li id="customer-review4">
+                    <h2>"I've noticed that my package was opened before then I checked the laptop integrity. Thankfully, I got the same model ASAP and the problem was resolved"</h2>
+                    <p>— SexyGamer9000</p>
+                </li>
+            </ul>
+        </div>
+        <form action="" class="review-form">
+            <h2>Please give us your feedback to become better</h2>
+            <label for="form-name">Name and review:</label>
+            <input type="text" name="" id="review-name">
+            <textarea name="" id="review-text" cols="30" rows="4"></textarea>
+            <input id="submitReview" type="submit" value="Submit review">
+        </form>
+    </section>
 
     <!-- Laptops -->
 

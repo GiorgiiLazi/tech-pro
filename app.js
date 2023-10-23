@@ -28,7 +28,19 @@ const formPassword1 = document.getElementById('form-password1')
 const formPassword2 = document.getElementById('form-password2')
 const checkSendAds = document.getElementById('sendAds')
 const formBackBtn = document.querySelector('#formBackBtn')
-const signInRef = document.getElementById('signInRef')
+const signInRef = document.getElementById('joinRef')
+const sections = document.querySelectorAll(".section")
+const regPop = document.querySelector(".reg-Pop")
+const reviewsSection = document.querySelector('.reviewsSection')
+const regInHeader = document.getElementById('regIn-header')
+const regInText = document.getElementById('regIn-text')
+const reviewForm = document.querySelector('.review-form')
+const reviewName = document.getElementById('review-name')
+const reviewText = document.getElementById('review-text')
+const customersReviews = document.querySelector('.customers-reviews')
+const customerReview = document.querySelector('.customer-review')
+const reviewsRef = document.getElementById('reviewsRef')
+
 
 
 
@@ -73,7 +85,10 @@ removeBtnThree.addEventListener('click', ()=>{
 // show about
 
 aboutRef.addEventListener('click', ()=>{
-    mainSection.classList.add('not-show')
+    sections.forEach(section =>{
+        section.classList.add('not-show')
+    })
+    
     aboutSection.classList.remove('not-show')
 })
 
@@ -84,7 +99,10 @@ aboutBackBtn.addEventListener('click', ()=>{
 
 // sign in form
 signInRef.addEventListener('click', ()=>{
-    mainSection.classList.add('not-show')
+    sections.forEach(section =>{
+        section.classList.add('not-show')
+    })
+    
     signInSection.classList.remove('not-show')
 })
 
@@ -95,13 +113,64 @@ formBackBtn.addEventListener('click', ()=>{
 
 signInForm.addEventListener('submit', (e)=>{
     e.preventDefault();
+    
+    regPop.classList.remove('not-show')
 
-    console.log(userName.value)
-    console.log(phoneNumber.value)
-    console.log(formEmail.value)
-    console.log(formPassword1.value)
-    console.log(formPassword2.value)
-    console.log(checkSendAds.checked)
+    // check for mistakes in password
+    if(formPassword1.value === formPassword2.value){
+        regInHeader.textContent = 'You have successfully registered'
+        if(checkSendAds.checked){
+            regInText.textContent = "You shall receive our special offers to your email"
+        }
+        else{
+            regInText.textContent = ""
+        }
+    }
+    else{
+        regInHeader.textContent = 'Try again please'
+    }
+    
+    // auto-Popup removal
+    setTimeout(() =>{
+        regPop.classList.add('not-show')
+    }, 5000)
+
+    // console.log(userName.value)
+    // console.log(phoneNumber.value)
+    // console.log(formEmail.value)
+    // console.log(formPassword1.value)
+    // console.log(formPassword2.value)
+    // console.log(checkSendAds.checked)
+    
+    subForm.reset()
+})
+
+// review form
+
+reviewsRef.addEventListener('click', ()=>{
+    sections.forEach(section =>{
+        section.classList.add('not-show')
+    })
+    
+    reviewsSection.classList.remove('not-show')
+})
+
+reviewForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+
+    scrollTo({ top: 0, behavior: 'smooth' })
+    
+    const template = document.createElement("div")
+    template.innerHTML = `
+        <li id="customer-review1">
+            <h2>"${reviewText.value}"</h2>
+            <p>— ${reviewName.value}</p>
+        </li>
+    `
+    customersReviews.prepend(template)
+
+    reviewForm.classList.add('not-show')
+    
     
     subForm.reset()
 })
