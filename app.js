@@ -57,7 +57,7 @@ const hdNavLink = document.querySelector('.hdNavLink')
 const hdNavLink2 = document.querySelector('.hdNavLink2')
 const returnHd = document.querySelector('.return-hd')
 
-
+console.log('it works')
 
 
 
