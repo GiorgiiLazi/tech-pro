@@ -56,13 +56,13 @@
                         <span style="color: white; text-shadow: none">&#8595;</span> 
                     </a>
                     <div class="dropdown-content">
-                        <a href="">Laptops</a>
-                        <a href="">PC</a>
-                        <a href="">TV & Monitors</a>
-                        <a href="">Headphones</a>
+                        <a class="laptopNavLink">Laptops</a>
+                        <a class="pcNavLink">PC</a>
+                        <a class="tvNavLink">TV & Monitors</a>
+                        <a class="hdNavLink">Headphones</a>
                     </div>
                 </li>
-                <li>
+                <!-- <li>
                     <a class="nav-links" href="https://github.com/GiorgiiLazi/tech-pro.git">
                         <img src="./imgs/github.png" alt="">
                     </a>
@@ -76,7 +76,7 @@
                     <a class="nav-links" href="https://t.me/gilaazi">
                         <img src="./imgs/telegram.png" alt="">
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a style="text-decoration: underline ;" class="nav-links" href="">
                         +999 999 999
@@ -102,19 +102,19 @@
             We sell laptops and laptops accessories!
         </div> -->
         
-        <div class="box1">
+        <div class="box1 laptopNavLink2">
             <img src="./imgs/laptop.jpg" alt="">
             <h2 class="box-title">Laptops</h2>
         </div>
-        <div class="box2">
+        <div class="box2 pcNavLink2">
             <img src="./imgs/pc.jpg" alt="">
             <h2 class="box-title">PC</h2>
         </div>
-        <div class="box3">
+        <div class="box3 tvNavLink2">
             <img src="./imgs/tv.jpg" alt="">
             <h2 class="box-title">TV & Monitors</h2>
         </div>
-        <div class="box4">
+        <div class="box4 hdNavLink2">
             <img src="./imgs/headphones.jpg" alt="">
             <h2 class="box-title">Headphones</h2>
         </div>
@@ -187,7 +187,7 @@
 
     <!-- Reviews -->
 
-    <section class="reviewsSection not-show">
+    <section class="reviewsSection section not-show">
         <div class="reviews-content">
             <ul class="customers-reviews">
                 <li id="customer-review2">
@@ -215,11 +215,185 @@
 
     <!-- Laptops -->
 
+    <section class="laptopSection section not-show">
+        <div class="return-laptop">
+            <span>&#8629; Go back</span>
+        </div>
+        <ul class="product">
+            <li id="laptop1">
+                <img class="product-img" src="./imgs/products/laptop1.png" alt="">
+                <h2 class="product-title">
+                    14.1" DEXP Aquilon Silver
+                </h2>
+                <p class="product-ram">8Gb</p>
+                <p class="product-cpu">Intel Celeron N4020, cores: 2 x 1.1 Hhz</p>
+                <p class="product-gpu">Intel UHD Graphics 600</p>
+                <p class="product-price">219$</p>
+                <button class="buy">Add to buy</button>
+            </li>
+            <li id="laptop2">
+                <img class="product-img" src="./imgs/products/laptop2.png" alt="">
+                <h2 class="product-title">16" Lenovo Legion 7 16IAX7 Grey</h2>
+                <p class="product-ram">32Gb</p>
+                <p class="product-cpu">Intel Core i9-12900HX, cores: 8x8, x 2.3 Hhz</p>
+                <p class="product-gpu">GeForce RTX 3080 Ti</p>
+                <p class="product-price">3452$</p>
+                <button class="buy">Add to buy</button>
+            </li>
+            <li id="laptop3">
+                <img class="product-img" src="./imgs/products/laptop3.png" alt="">
+                <h2 class="product-title">15.6" Ноутбук ASUS TUF Dash F15 Black</h2>
+                <p class="product-ram">16Gb</p>
+                <p class="product-cpu">Intel Core i7-12650H, cores: 6 + 4x</p>
+                <p class="product-gpu">RTX 3050Ti</p>
+                <p class="product-price">967$</p>
+                <button class="buy">Add to buy</button>
+            </li>
+            <li id="laptop4">
+                <img class="product-img" src="./imgs/products/laptop4.png" alt="">
+                <h2 class="product-title">17.3" ASUS TUF Gaming F17 Black</h2>
+                <p class="product-ram">16Gb</p>
+                <p class="product-cpu">Intel Core i5-11400H, cores: 6 x 2.7 Hhz</p>
+                <p class="product-gpu">GeForce RTX 2050 4Gb</p>
+                <p class="product-price">660$</p>
+                <button class="buy">Add to buy</button>
+            </li>
+        </ul>
+    </section>
+
     <!-- PC -->
+
+    <section class="pcSection section not-show">
+        <div class="return-pc">
+            <span>&#8629; Go back</span>
+        </div>
+        <ul class="product">
+            <li id="pc1">
+                <img class="product-img" src="./imgs/products/pc1.png" alt="">
+                <h2 class="product-title">
+                    HP OMEN GT22-0005ur
+                </h2>
+                <p class="product-ram">64Gb</p>
+                <p class="product-cpu">Intel Core i9-12900K, 8 x 3.2 Hhz</p>
+                <p class="product-gpu">GeForce RTX 3080 Ti</p>
+                <p class="product-price">4968$</p>
+                <button class="buy">Add to buy</button>
+            </li>
+            <li id="pc2">
+                <img class="product-img" src="./imgs/products/pc2.png" alt="">
+                <h2 class="product-title">DEXP Atlas H341</h2>
+                <p class="product-ram">4Gb</p>
+                <p class="product-cpu">Intel Celeron N4020, 2 x 1.1 Hhz</p>
+                <p class="product-gpu">Intel UHD Graphics 600</p>
+                <p class="product-price">115$</p>
+                <button class="buy">Add to buy</button>
+            </li>
+            <li id="pc3">
+                <img class="product-img" src="./imgs/products/pc3.png" alt="">
+                <h2 class="product-title">MSI MAG Infinite S3</h2>
+                <p class="product-ram">16Gb</p>
+                <p class="product-cpu">Intel Core i5-13400F, 6 x 2.5 Hhz</p>
+                <p class="product-gpu">GeForce RTX 3060,</p>
+                <p class="product-price">845$</p>
+                <button class="buy">Add to buy</button>
+            </li>
+            <li id="pc4">
+                <img class="product-img" src="./imgs/products/pc4.png" alt="">
+                <h2 class="product-title">ARDOR GAMING EVO X036</h2>
+                <p class="product-ram">32Gb</p>
+                <p class="product-cpu">Intel Core i7-12700KF, 8 x 3.6 Hhz</p>
+                <p class="product-gpu">GeForce RTX 4080</p>
+                <p class="product-price">2460$</p>
+                <button class="buy">Add to buy</button>
+            </li>
+        </ul>
+    </section>
 
     <!-- TV & Monitors -->
 
+    <section class="tvSection section not-show">
+        <div class="return-tv">
+            <span>&#8629; Go back</span>
+        </div>
+        <ul class="product">
+            <li id="tv1">
+                <img class="product-img" src="./imgs/products/tv1.png" alt="">
+                <h2 class="product-title">
+                    24" TV LED Aceline 24HEN1
+                </h2>
+                <p class="product-res">HD 1366x768</p>
+                <p class="product-price">63$</p>
+                <button class="buy">Add to buy</button>
+            </li>
+            <li id="tv2">
+                <img class="product-img" src="./imgs/products/tv2.png" alt="">
+                <h2 class="product-title">98" TV LED Samsung QE98QN100BUXRU Grey</h2>
+                <p class="product-res">QLED, 4K UltraHD, 3840x2160 120 Hz</p>
+                
+                <p class="product-price">35999$</p>
+                <button class="buy">Add to buy</button>
+            </li>
+            <li id="tv3">
+                <img class="product-img" src="./imgs/products/tv3.png" alt="">
+                <h2 class="product-title">23.6" Monitor AOC M2470SWD23 Black</h2>
+                <p class="product-res">1920x1080 60 Hz VA</p>
+                <p class="product-price">84$</p>
+                <button class="buy">Add to buy</button>
+            </li>
+            <li id="tv4">
+                <img class="product-img" src="./imgs/products/tv4.png" alt="">
+                <h2 class="product-title">55" Monitor Samsung Odyssey Ark G97NC Black</h2>
+                <p class="product-res">3840x2160 165Hz, VA</p>
+                <p class="product-price">2396$</p>
+                <button class="buy">Add to buy</button>
+            </li>
+        </ul>
+    </section>
+
     <!-- Headphones -->
+
+    <section class="hdSection section not-show">
+        <div class="return-hd">
+            <span>&#8629; Go back</span>
+        </div>
+        <ul class="product">
+            <li id="hd1">
+                <img class="product-img" src="./imgs/products/head1.png" alt="">
+                <h2 class="product-title">
+                    Bluetooth-Headset VIXTER BT-1007 Black
+                </h2>
+                <p class="product-res">Bluetooth, 5.0</p>
+                <p class="product-price">4.5$</p>
+                <button class="buy">Add to buy</button>
+            </li>
+            <li id="hd2">
+                <img class="product-img" src="./imgs/products/head2.png" alt="">
+                <h2 class="product-title">
+                    Bluetooth-Headset Apple AirPods Max Pink
+                </h2>
+                <p class="product-res">Bluetooth, 5.0</p>
+                
+                <p class="product-price">650$</p>
+                <button class="buy">Add to buy</button>
+            </li>
+            <li id="hd3">
+                <img class="product-img" src="./imgs/products/head3.png" alt="">
+                <h2 class="product-title">
+                    Bluetooth-Headset SteelSeries Arctis Nova Pro Black
+                </h2>
+                <p class="product-res">1920x1080 60 Hz VA</p>
+                <p class="product-price">565$</p>
+                <button class="buy">Add to buy</button>
+            </li>
+            <li id="hd4">
+                <img class="product-img" src="./imgs/products/head4.png" alt="">
+                <h2 class="product-title">Perfeo ALPHA Headset Yellow</h2>
+                <p class="product-res">2m cable</p>
+                <p class="product-price">1$</p>
+                <button class="buy">Add to buy</button>
+            </li>
+        </ul>
+    </section>
 
     <!-- Subscription to newsletter -->
 

@@ -40,6 +40,22 @@ const reviewText = document.getElementById('review-text')
 const customersReviews = document.querySelector('.customers-reviews')
 const customerReview = document.querySelector('.customer-review')
 const reviewsRef = document.getElementById('reviewsRef')
+const laptopSection = document.querySelector('.laptopSection')
+const laptopNavLink = document.querySelector('.laptopNavLink')
+const laptopNavLink2 = document.querySelector('.laptopNavLink2')
+const returnLaptop = document.querySelector('.return-laptop')
+const pcSection = document.querySelector('.pcSection')
+const pcNavLink = document.querySelector('.pcNavLink')
+const pcNavLink2 = document.querySelector('.pcNavLink2')
+const returnPc = document.querySelector('.return-pc')
+const tvSection = document.querySelector('.tvSection')
+const tvNavLink = document.querySelector('.tvNavLink')
+const tvNavLink2 = document.querySelector('.tvNavLink2')
+const returnTv = document.querySelector('.return-tv')
+const hdSection = document.querySelector('.hdSection')
+const hdNavLink = document.querySelector('.hdNavLink')
+const hdNavLink2 = document.querySelector('.hdNavLink2')
+const returnHd = document.querySelector('.return-hd')
 
 
 
@@ -142,7 +158,7 @@ signInForm.addEventListener('submit', (e)=>{
     // console.log(formPassword2.value)
     // console.log(checkSendAds.checked)
     
-    subForm.reset()
+    signInForm.reset()
 })
 
 // review form
@@ -163,14 +179,109 @@ reviewForm.addEventListener('submit', (e)=>{
     const template = document.createElement("div")
     template.innerHTML = `
         <li id="customer-review1">
-            <h2>"${reviewText.value}"</h2>
-            <p>— ${reviewName.value}</p>
+            <h2>"${reviewText.value.trim()}"</h2>
+            <p>— ${reviewName.value.trim()}</p>
         </li>
     `
     customersReviews.prepend(template)
 
     reviewForm.classList.add('not-show')
     
+    reviewForm.reset()
+})
+
+// laptop links
+
+laptopNavLink.addEventListener('click', ()=>{
+    sections.forEach(section =>{
+        section.classList.add('not-show')
+    })
     
-    subForm.reset()
+    laptopSection.classList.remove('not-show')
+})
+laptopNavLink2.addEventListener('click', ()=>{
+    sections.forEach(section =>{
+        section.classList.add('not-show')
+    })
+    
+    laptopSection.classList.remove('not-show')
+})
+returnLaptop.addEventListener('click', ()=>{
+    sections.forEach(section =>{
+        section.classList.add('not-show')
+    })
+    mainSection.classList.remove('not-show')
+
+})
+
+// pc links
+
+pcNavLink.addEventListener('click', ()=>{
+    sections.forEach(section =>{
+        section.classList.add('not-show')
+    })
+    
+    pcSection.classList.remove('not-show')
+})
+pcNavLink2.addEventListener('click', ()=>{
+    sections.forEach(section =>{
+        section.classList.add('not-show')
+    })
+    
+    pcSection.classList.remove('not-show')
+})
+returnPc.addEventListener('click', ()=>{
+    sections.forEach(section =>{
+        section.classList.add('not-show')
+    })
+    mainSection.classList.remove('not-show')
+
+})
+
+// tv links
+
+tvNavLink.addEventListener('click', ()=>{
+    sections.forEach(section =>{
+        section.classList.add('not-show')
+    })
+    
+    tvSection.classList.remove('not-show')
+})
+tvNavLink2.addEventListener('click', ()=>{
+    sections.forEach(section =>{
+        section.classList.add('not-show')
+    })
+    
+    tvSection.classList.remove('not-show')
+})
+returnTv.addEventListener('click', ()=>{
+    sections.forEach(section =>{
+        section.classList.add('not-show')
+    })
+    mainSection.classList.remove('not-show')
+
+})
+
+// hd links
+
+hdNavLink.addEventListener('click', ()=>{
+    sections.forEach(section =>{
+        section.classList.add('not-show')
+    })
+    
+    hdSection.classList.remove('not-show')
+})
+hdNavLink2.addEventListener('click', ()=>{
+    sections.forEach(section =>{
+        section.classList.add('not-show')
+    })
+    
+    hdSection.classList.remove('not-show')
+})
+returnHd.addEventListener('click', ()=>{
+    sections.forEach(section =>{
+        section.classList.add('not-show')
+    })
+    mainSection.classList.remove('not-show')
+
 })

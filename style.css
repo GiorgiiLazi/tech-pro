@@ -209,11 +209,15 @@ body{
     background-color: #f9f9f9;
     min-width: 115px;
 
+
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
     text-shadow: 1px 1px 1px lightgrey;
     padding: 20px;
     z-index: 1;
     color: black
+  }
+  .dropdown-content *{
+    cursor: pointer;
   }
   
   .dropdown:hover .dropdown-content {
@@ -377,7 +381,7 @@ body{
     justify-content: space-around;
     font-family: Oswald;
     text-wrap: balance;
-    animation: aboutFadeIn 2s ease-in;
+    animation: aboutFadeIn 2s ease-out;
 }
 .about-text h1{
     text-align: center;
@@ -434,11 +438,12 @@ body{
     color:white;
     text-shadow: 1.5px 2px 2px black;
     font-family: Oswald,  sans-serif;
-    animation: formFadeIn 2s ease-in;
+    animation: formFadeIn 2s ease;
 }
 .sign-form label{
     display: flex ;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     padding: 5px 0px;;
 }
@@ -452,7 +457,7 @@ body{
     padding: 4px;
     outline-style: none;
     border: none;
-    width: 100%;
+    width: 80%;
     height: 20px;
 }
 #formSubmit-Btn{
@@ -781,6 +786,251 @@ footer{
     align-items: center;
     justify-content: center;
     width: 100%;
+}
+/* laptop section */
+.laptopSection{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product{
+    display: grid;
+    grid-template-columns: repeat(1fr, 2);
+    grid-template-rows: repeat(1fr, 2);
+    grid-auto-rows: minmax(150px, 600px);
+    grid-auto-columns: minmax(250px, 300px);
+    gap:50px;
+    list-style: none;
+}
+.product *{
+    height: auto;
+    width: auto;
+    background-color: white;
+    padding: 0px;
+    border-radius: 20px;
+    text-align: center;
+    font-family: Oswald;
     
 }
+.product-img{
+    width: 100%;
+    height: auto
+    
+}
+#laptop1{
+    grid-column: 1;
+    grid-row: 1;
+    padding: 20px;
+    text-wrap: balance;
+    box-shadow: 16px 10px 3px 2px rgba(0,0,0,0.4);
+    animation: laptopFade 0.4s ease
+    
+}
+#laptop2{
+    grid-column: 2;
+    grid-row: 1;
+    padding: 20px;
+    text-wrap: balance;
+    box-shadow: 16px 10px 3px 2px rgba(0,0,0,0.4);
+    animation: laptopFade 0.8s ease
+}
+#laptop3{
+    grid-column: 1;
+    grid-row: 2;
+    padding: 20px;
+    text-wrap: balance;
+    box-shadow: 16px 10px 3px 2px rgba(0,0,0,0.4);
+    animation: laptopFade 1.4s ease
+}
 
+#laptop4{
+    grid-column: 2;
+    grid-row: 2;
+    padding: 20px;
+    text-wrap: balance;
+    box-shadow: 16px 10px 3px 2px rgba(0,0,0,0.4);
+    animation: laptopFade 2s ease
+}
+.buy{
+    border: none;
+    color:white;
+    background-color: crimson;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+}
+@keyframes laptopFade{
+    0%{opacity:0; transform: translateY(200px)}
+    110%{opacity:1; transform: translateY(0px)}
+}
+.return-laptop{
+    position: fixed;
+    top: 100px;
+    right: 50px;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    font-family: Oswald;
+}
+/* pc section */
+.pcSection{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pc1{
+    grid-column: 1;
+    grid-row: 1;
+    padding: 20px;
+    text-wrap: balance;
+    box-shadow: 16px 10px 3px 2px rgba(0,0,0,0.4);
+    animation: laptopFade 0.4s ease
+    
+}
+#pc2{
+    grid-column: 2;
+    grid-row: 1;
+    padding: 20px;
+    text-wrap: balance;
+    box-shadow: 16px 10px 3px 2px rgba(0,0,0,0.4);
+    animation: laptopFade 0.8s ease
+}
+#pc3{
+    grid-column: 1;
+    grid-row: 2;
+    padding: 20px;
+    text-wrap: balance;
+    box-shadow: 16px 10px 3px 2px rgba(0,0,0,0.4);
+    animation: laptopFade 1.4s ease
+}
+
+#pc4{
+    grid-column: 2;
+    grid-row: 2;
+    padding: 20px;
+    text-wrap: balance;
+    box-shadow: 16px 10px 3px 2px rgba(0,0,0,0.4);
+    animation: laptopFade 2s ease
+}
+.return-pc{
+    position: fixed;
+    top: 100px;
+    right: 50px;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    font-family: Oswald;
+}
+/* tv section */
+.tvSection{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tv1{
+    grid-column: 1;
+    grid-row: 1;
+    padding: 20px;
+    text-wrap: balance;
+    box-shadow: 16px 10px 3px 2px rgba(0,0,0,0.4);
+    animation: laptopFade 0.4s ease
+    
+}
+#tv2{
+    grid-column: 2;
+    grid-row: 1;
+    padding: 20px;
+    text-wrap: balance;
+    box-shadow: 16px 10px 3px 2px rgba(0,0,0,0.4);
+    animation: laptopFade 0.8s ease
+}
+#tv3{
+    grid-column: 1;
+    grid-row: 2;
+    padding: 20px;
+    text-wrap: balance;
+    box-shadow: 16px 10px 3px 2px rgba(0,0,0,0.4);
+    animation: laptopFade 1.4s ease
+}
+
+#tv4{
+    grid-column: 2;
+    grid-row: 2;
+    padding: 20px;
+    text-wrap: balance;
+    box-shadow: 16px 10px 3px 2px rgba(0,0,0,0.4);
+    animation: laptopFade 2s ease
+}
+.return-tv{
+    position: fixed;
+    top: 100px;
+    right: 50px;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    font-family: Oswald;
+}
+/* headset section */
+.hdSection{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hd1{
+    grid-column: 1;
+    grid-row: 1;
+    padding: 20px;
+    text-wrap: balance;
+    box-shadow: 16px 10px 3px 2px rgba(0,0,0,0.4);
+    animation: laptopFade 0.4s ease
+    
+}
+#hd2{
+    grid-column: 2;
+    grid-row: 1;
+    padding: 20px;
+    text-wrap: balance;
+    box-shadow: 16px 10px 3px 2px rgba(0,0,0,0.4);
+    animation: laptopFade 0.8s ease
+}
+#hd3{
+    grid-column: 1;
+    grid-row: 2;
+    padding: 20px;
+    text-wrap: balance;
+    box-shadow: 16px 10px 3px 2px rgba(0,0,0,0.4);
+    animation: laptopFade 1.4s ease
+}
+
+#hd4{
+    grid-column: 2;
+    grid-row: 2;
+    padding: 20px;
+    text-wrap: balance;
+    box-shadow: 16px 10px 3px 2px rgba(0,0,0,0.4);
+    animation: laptopFade 2s ease
+}
+.return-hd{
+    position: fixed;
+    top: 100px;
+    right: 50px;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    font-family: Oswald;
+}
