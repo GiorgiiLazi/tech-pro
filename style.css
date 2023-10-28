@@ -3,7 +3,11 @@
 html{
     height: auto;
     width: 100%;
+    overflow: auto;
 }
+html, body {
+    overflow-x: hidden;
+  }
 body{
     margin: 0px;
     padding: 0px;
@@ -607,6 +611,7 @@ body{
     align-items: center;
 }
 .reviews-content{
+    margin: 0px 20px;
     width: 100%;
     text-wrap: balance;
     text-align: center;

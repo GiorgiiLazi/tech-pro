@@ -112,11 +112,13 @@ aboutRef.addEventListener('click', ()=>{
     })
     
     aboutSection.classList.remove('not-show')
+    scrollTo({ top: 0, behavior: 'smooth' })
 })
 
 aboutBackBtn.addEventListener('click', ()=>{
     mainSection.classList.remove('not-show')
     aboutSection.classList.add('not-show')
+    scrollTo({ top: 0, behavior: 'smooth' })
 })
 
 // sign in form
@@ -126,11 +128,13 @@ signInRef.addEventListener('click', ()=>{
     })
     
     signInSection.classList.remove('not-show')
+    scrollTo({ top: 0, behavior: 'smooth' })
 })
 
 formBackBtn.addEventListener('click', ()=>{
     mainSection.classList.remove('not-show')
     signInSection.classList.add('not-show')
+    scrollTo({ top: 0, behavior: 'smooth' })
 })
 
 signInForm.addEventListener('submit', (e)=>{
@@ -175,6 +179,7 @@ reviewsRef.addEventListener('click', ()=>{
     })
     
     reviewsSection.classList.remove('not-show')
+    scrollTo({ top: 0, behavior: 'smooth' })
 })
 
 reviewForm.addEventListener('submit', (e)=>{
@@ -204,6 +209,7 @@ laptopNavLink.addEventListener('click', ()=>{
     })
     
     laptopSection.classList.remove('not-show')
+    scrollTo({ top: 0, behavior: 'smooth' })
 })
 laptopNavLink2.addEventListener('click', ()=>{
     sections.forEach(section =>{
@@ -211,12 +217,14 @@ laptopNavLink2.addEventListener('click', ()=>{
     })
     
     laptopSection.classList.remove('not-show')
+    scrollTo({ top: 0, behavior: 'smooth' })
 })
 returnLaptop.addEventListener('click', ()=>{
     sections.forEach(section =>{
         section.classList.add('not-show')
     })
     mainSection.classList.remove('not-show')
+    scrollTo({ top: 0, behavior: 'smooth' })
 
 })
 
@@ -228,6 +236,7 @@ pcNavLink.addEventListener('click', ()=>{
     })
     
     pcSection.classList.remove('not-show')
+    scrollTo({ top: 0, behavior: 'smooth' })
 })
 pcNavLink2.addEventListener('click', ()=>{
     sections.forEach(section =>{
@@ -235,12 +244,14 @@ pcNavLink2.addEventListener('click', ()=>{
     })
     
     pcSection.classList.remove('not-show')
+    scrollTo({ top: 0, behavior: 'smooth' })
 })
 returnPc.addEventListener('click', ()=>{
     sections.forEach(section =>{
         section.classList.add('not-show')
     })
     mainSection.classList.remove('not-show')
+    scrollTo({ top: 0, behavior: 'smooth' })
 
 })
 
@@ -252,6 +263,7 @@ tvNavLink.addEventListener('click', ()=>{
     })
     
     tvSection.classList.remove('not-show')
+    scrollTo({ top: 0, behavior: 'smooth' })
 })
 tvNavLink2.addEventListener('click', ()=>{
     sections.forEach(section =>{
@@ -259,12 +271,14 @@ tvNavLink2.addEventListener('click', ()=>{
     })
     
     tvSection.classList.remove('not-show')
+    scrollTo({ top: 0, behavior: 'smooth' })
 })
 returnTv.addEventListener('click', ()=>{
     sections.forEach(section =>{
         section.classList.add('not-show')
     })
     mainSection.classList.remove('not-show')
+    scrollTo({ top: 0, behavior: 'smooth' })
 
 })
 
@@ -276,6 +290,7 @@ hdNavLink.addEventListener('click', ()=>{
     })
     
     hdSection.classList.remove('not-show')
+    scrollTo({ top: 0, behavior: 'smooth' })
 })
 hdNavLink2.addEventListener('click', ()=>{
     sections.forEach(section =>{
@@ -283,12 +298,14 @@ hdNavLink2.addEventListener('click', ()=>{
     })
     
     hdSection.classList.remove('not-show')
+    scrollTo({ top: 0, behavior: 'smooth' })
 })
 returnHd.addEventListener('click', ()=>{
     sections.forEach(section =>{
         section.classList.add('not-show')
     })
     mainSection.classList.remove('not-show')
+    scrollTo({ top: 0, behavior: 'smooth' })
 
 })
 // burger menu
@@ -324,6 +341,10 @@ mobileAbout.addEventListener('click', ()=>{
         linkItems.style.display = 'flex'
     }
 
+    scrollTo({ top: 0, behavior: 'smooth' })
+
+    
+
 })
 
 mobileJoin.addEventListener('click', ()=>{
@@ -341,6 +362,8 @@ mobileJoin.addEventListener('click', ()=>{
     }else{
         linkItems.style.display = 'flex'
     }
+
+    scrollTo({ top: 0, behavior: 'smooth' })
 })
 
 mobileReviews.addEventListener('click', ()=>{
@@ -357,12 +380,15 @@ mobileReviews.addEventListener('click', ()=>{
     }else{
         linkItems.style.display = 'flex'
     }
+
+    scrollTo({ top: 0, behavior: 'smooth' })
 })
 
 // 
 
 dropdownNavLinks.forEach(NavLink =>{
     NavLink.addEventListener('click', ()=>{
+        scrollTo({ top: 0, behavior: 'smooth' })
         if(navbar.style.height === "100%"){
             navbar.style.height = "80px"
     
@@ -371,7 +397,9 @@ dropdownNavLinks.forEach(NavLink =>{
             }else{
             linkItems.style.display = 'flex'
             }
+
         }
+        scrollTo({ top: 0, behavior: 'smooth' })
     })
 })
     
