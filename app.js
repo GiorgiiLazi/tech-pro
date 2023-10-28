@@ -56,8 +56,13 @@ const hdSection = document.querySelector('.hdSection')
 const hdNavLink = document.querySelector('.hdNavLink')
 const hdNavLink2 = document.querySelector('.hdNavLink2')
 const returnHd = document.querySelector('.return-hd')
-
-console.log('it works')
+const buyBtns = document.querySelectorAll('.buy')
+const burgerMenu = document.querySelector('.burger')
+const linkItems = document.querySelector(".link-items")
+const navLi = document.querySelector('.nav-li')
+const mobileAbout = document.querySelector('.mobileAbout')
+const mobileJoin = document.querySelector('.mobileJoin')
+const mobileReviews = document.querySelector('.mobileReviews')
 
 
 
@@ -285,3 +290,70 @@ returnHd.addEventListener('click', ()=>{
     mainSection.classList.remove('not-show')
 
 })
+// burger menu
+burgerMenu.addEventListener('click', (e) => {
+    
+    // navbar.classList.toggle('wide-navbar')
+    navbar.style.height = "100%"
+
+    // navLi.classList.remove('not-show')
+    
+    if(linkItems.style.display === 'none'){
+        linkItems.style.display = 'flex'
+    }else{
+        linkItems.style.display = 'none'
+    }
+})
+
+// mobile refs
+
+mobileAbout.addEventListener('click', ()=>{
+    sections.forEach(section =>{
+        section.classList.add('not-show')
+    })
+    aboutSection.classList.remove('not-show')
+
+})
+
+mobileJoin.addEventListener('click', ()=>{
+    sections.forEach(section =>{
+        section.classList.add('not-show')
+    })
+    
+    signInSection.classList.remove('not-show')
+})
+
+mobileReviews.addEventListener('click', ()=>{
+    sections.forEach(section =>{
+        section.classList.add('not-show')
+    })
+    
+    reviewsSection.classList.remove('not-show')
+})
+
+// product basket
+
+const items = []
+    
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+// buyBtns.forEach(btn =>{
+//     btn.addEventListener('click', ()=>{
+//         console.log('the button was pressed')
+        
+        
+//     })
+// })
+
