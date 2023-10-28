@@ -63,6 +63,7 @@ const navLi = document.querySelector('.nav-li')
 const mobileAbout = document.querySelector('.mobileAbout')
 const mobileJoin = document.querySelector('.mobileJoin')
 const mobileReviews = document.querySelector('.mobileReviews')
+const dropdownNavLinks = document.querySelectorAll('.dropdownNavLink')
 
 
 
@@ -291,7 +292,7 @@ returnHd.addEventListener('click', ()=>{
 
 })
 // burger menu
-burgerMenu.addEventListener('click', (e) => {
+burgerMenu.addEventListener('click', () => {
     
     // navbar.classList.toggle('wide-navbar')
     navbar.style.height = "100%"
@@ -313,6 +314,16 @@ mobileAbout.addEventListener('click', ()=>{
     })
     aboutSection.classList.remove('not-show')
 
+    navbar.style.height = "80px"
+
+    // navLi.classList.remove('not-show')
+    
+    if(linkItems.style.display === 'flex'){
+        linkItems.style.display = 'none'
+    }else{
+        linkItems.style.display = 'flex'
+    }
+
 })
 
 mobileJoin.addEventListener('click', ()=>{
@@ -321,6 +332,15 @@ mobileJoin.addEventListener('click', ()=>{
     })
     
     signInSection.classList.remove('not-show')
+
+    navbar.style.height = "80px"
+
+    
+    if(linkItems.style.display === 'flex'){
+        linkItems.style.display = 'none'
+    }else{
+        linkItems.style.display = 'flex'
+    }
 })
 
 mobileReviews.addEventListener('click', ()=>{
@@ -329,11 +349,31 @@ mobileReviews.addEventListener('click', ()=>{
     })
     
     reviewsSection.classList.remove('not-show')
+
+    navbar.style.height = "80px"
+    
+    if(linkItems.style.display === 'flex'){
+        linkItems.style.display = 'none'
+    }else{
+        linkItems.style.display = 'flex'
+    }
 })
 
-// product basket
+// 
 
-const items = []
+dropdownNavLinks.forEach(NavLink =>{
+    NavLink.addEventListener('click', ()=>{
+        if(navbar.style.height === "100%"){
+            navbar.style.height = "80px"
+    
+            if(linkItems.style.display === 'flex'){
+            linkItems.style.display = 'none'
+            }else{
+            linkItems.style.display = 'flex'
+            }
+        }
+    })
+})
     
    
 
